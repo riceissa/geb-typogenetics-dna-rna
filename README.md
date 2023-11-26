@@ -7,6 +7,11 @@ Cards created while reading Douglas Hofstadter's _Gödel, Escher, Bach: an Etern
 
 This section is only relevant if you want to compile the website locally for development purposes.
 
+You will need the command-line programs `unzip` and `pandoc` in order to run the following commands.
+If you don't have them, on Ubuntu you can just run `sudo apt install unzip anki`.
+Also, you will need to install the `anki` Python Pip package. To do this,
+you can run `python3 -m pip install -U anki`.
+
 First download the `.apkg` file into the main directory, and name is `geb.apkg`. Then run the following commands:
 
 ```bash
