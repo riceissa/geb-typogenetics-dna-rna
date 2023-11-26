@@ -1,0 +1,7 @@
+body {
+  font-family: "Segoe UI", Helvetica, sans-serif;
+}
+
+div.card {
+  border: 1px solid black;
+}
