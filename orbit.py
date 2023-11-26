@@ -72,14 +72,16 @@ with open("docs/orbit/index.html", "w") as f:
                 """)
 
                 for note in section_map[section]:
+                    question_attachments = ""
+                    answer_attachments = ""
                     match = re.search(r'!\[\]\(([^) ]+)\)', note["Front"])
                     if match:
                         image_url = "https://riceissa.github.io/geb-typogenetics-dna-rna/browse/" + match.group(1)
-                        question_attachments = 'question-attachments="{image_url}"'
+                        question_attachments = f'question-attachments="{image_url}"'
                     match = re.search(r'!\[\]\(([^) ]+)\)', note["Back"])
                     if match:
                         image_url = "https://riceissa.github.io/geb-typogenetics-dna-rna/browse/" + match.group(1)
-                        answer_attachments = 'answer-attachments="{image_url}"'
+                        answer_attachments = f'answer-attachments="{image_url}"'
                     g.write(f"""<orbit-prompt
                             question="{html_to_markdown(note["Front"])}"
                             {question_attachments}
