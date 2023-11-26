@@ -5,6 +5,20 @@ body {
   word-wrap: break-word;
 }
 
+.front {
+  text-align: center;
+}
+
+.back {
+  text-align: center;
+}
+
+.notes {
+  margin-top: 15px;
+  font-size: 90%;
+  color: #444444;
+}
+
 div.card {
   width: 600px;
   border: 1px solid black;
