@@ -36,7 +36,6 @@ for section in util.sections:
     if not section_map[section]:
         print("<p>There are no cards for this section.</p>")
     for note in section_map[section]:
-        note = col.get_note(note_id)
         print('<div class="card">')
 
         print('<div class="front">')
