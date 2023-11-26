@@ -3,6 +3,16 @@ body {
   margin: auto;
   /* max-width: 40rem; */
   word-wrap: break-word;
+  background-color: #a0a0a0;
+}
+
+div.container {
+  background-color: #ffffff;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .front {
@@ -20,6 +30,8 @@ body {
 }
 
 div.card {
+  border-radius: 10px;
+  background-color: #fdf6e3;
   width: 600px;
   border: 1px solid black;
   padding: 20px;
