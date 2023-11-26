@@ -1,7 +1,16 @@
 body {
   font-family: "Segoe UI", Helvetica, sans-serif;
+  margin: auto;
+  /* max-width: 40rem; */
+  word-wrap: break-word;
 }
 
 div.card {
+  width: 600px;
   border: 1px solid black;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
