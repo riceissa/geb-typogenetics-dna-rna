@@ -9,10 +9,10 @@ import util
 
 def html_to_markdown(html_string):
     try:
-        p = subprocess.run(["pandoc", "-f", "html", "-t", "markdown"],
+        p = subprocess.run(["pandoc", "-f", "html", "-t", "markdown_strict", "--wrap=none"],
                            input=html_string.encode('utf-8'), check=True,
                            capture_output=True)
-        return p.stdout.decode('utf-8')
+        return p.stdout.decode('utf-8').replace('"', "&quot;").strip()
     except subprocess.CalledProcessError as e:
         print("Error running pandoc:",
               "error code:", e.returncode,
@@ -57,7 +57,34 @@ with open("docs/orbit/index.html", "w") as f:
             section_dir = f"docs/orbit/{util.slugify(section)}/"
             pathlib.Path(section_dir).mkdir(exist_ok=True)
             with open(section_dir + "index.html", "w") as g:
-                pass
+                g.write("""<!DOCTYPE html>
+            <html lang="en">
+                <head>
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                  <link rel="stylesheet" href="../../style.css">
+                  <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
+                </head>
+                <body>
+                <div class="container">
+                      <orbit-reviewarea color="red">
+                """)
+
+                for note in section_map[section]:
+                    g.write(f"""
+                        <orbit-prompt
+                            question="{html_to_markdown(note["Front"])}"
+                          answer="{html_to_markdown(note["Back"])}"
+                        ></orbit-prompt>
+                      """)
+
+
+                g.write("""
+                      </orbit-reviewarea>
+                        </div>
+                        </body>
+                        </html>
+                """)
 
     f.write("</ul>")
 
