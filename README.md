@@ -26,7 +26,7 @@ rm apkg/collection.anki2
 ./media.py
 
 # Generate the browse page
-./proc.py > docs/browse/index.html
+./browse.py > docs/browse/index.html
 
 # Generate the Orbit pages
 ./orbit.py
