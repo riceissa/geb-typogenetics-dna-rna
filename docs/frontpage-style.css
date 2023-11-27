@@ -32,7 +32,7 @@ body {
     /* This prevents there being a thin gray border on the sides on narrow
      * screens. */
     margin-left: 0;
-    margin-right: 0;    
+    margin-right: 0;
     background-color: #b58900;
 }
 
