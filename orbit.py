@@ -44,7 +44,7 @@ with open("docs/orbit/index.html", "w") as f:
         if not util.section_map[section]:
             f.write(f"<li>{section} (no cards for this section)</li>\n")
         else:
-            f.write(f'<li><a href="{util.slugify(section)}">{section}</a></li>\n')
+            f.write(f'<li><a href="{util.slugify(section)}">{section}</a> ({len(util.section_map[section])} cards)</li>\n')
 
             section_dir = f"docs/orbit/{util.slugify(section)}/"
             pathlib.Path(section_dir).mkdir(exist_ok=True)
