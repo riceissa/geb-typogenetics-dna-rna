@@ -25,20 +25,6 @@ def html_to_markdown(html_string):
               "error message:", e.stderr.decode("utf-8"), file=sys.stderr)
         sys.exit()
 
-col = Collection("apkg/collection.anki21")
-
-section_map = {}
-
-for section in util.sections:
-    section_map[section] = []
-
-for note_id in col.find_notes(""):
-    note = col.get_note(note_id)
-    try:
-        section_map[note["Section"]].append(note)
-    except KeyError:
-        print(f"Card has section name {note['Section']}, but this section isn't in the sections list!", file=sys.stderr)
-        sys.exit()
 
 with open("docs/orbit/index.html", "w") as f:
     f.write("""<!DOCTYPE html>
@@ -55,7 +41,7 @@ with open("docs/orbit/index.html", "w") as f:
     f.write("<ul>")
 
     for section in util.sections:
-        if not section_map[section]:
+        if not util.section_map[section]:
             f.write(f"<li>{section} (no cards for this section)</li>\n")
         else:
             f.write(f'<li><a href="{util.slugify(section)}">{section}</a></li>\n')
@@ -80,7 +66,7 @@ with open("docs/orbit/index.html", "w") as f:
                       <orbit-reviewarea color="yellow">
                 """)
 
-                for note in section_map[section]:
+                for note in util.section_map[section]:
                     note_front = html_to_markdown(note["Front"])
                     note_back = html_to_markdown(note["Back"])
                     note_notes = html_to_markdown(note["Notes"])
