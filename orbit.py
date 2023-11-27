@@ -72,23 +72,33 @@ with open("docs/orbit/index.html", "w") as f:
                 """)
 
                 for note in section_map[section]:
+                    note_front = html_to_markdown(note["Front"])
+                    note_back = html_to_markdown(note["Back"])
+                    note_notes = html_to_markdown(note["Notes"])
                     question_attachments = ""
                     answer_attachments = ""
-                    match = re.search(r'!\[\]\(([^) ]+)\)', note["Front"])
-                    if match:
-                        image_url = "https://riceissa.github.io/geb-typogenetics-dna-rna/browse/" + match.group(1)
+                    img_regex = r'!\[\]\(([^) ]+)\)'
+                    match = re.findall(img_regex, note_front)
+                    if len(match) > 1:
+                        raise ValueError("Question cannot contain more than one image!")
+                    if len(match) == 1:
+                        image_url = "https://riceissa.github.io/geb-typogenetics-dna-rna/browse/" + match[0]
                         question_attachments = f'question-attachments="{image_url}"'
-                    match = re.search(r'!\[\]\(([^) ]+)\)', note["Back"])
+                        note_front = re.sub(img_regex, "", note_front).strip()
+                    match = re.findall(img_regex, note_back)
+                    if len(match) > 1:
+                        raise ValueError("Answer cannot contain more than one image!")
                     if match:
-                        image_url = "https://riceissa.github.io/geb-typogenetics-dna-rna/browse/" + match.group(1)
+                        image_url = "https://riceissa.github.io/geb-typogenetics-dna-rna/browse/" + match[0]
                         answer_attachments = f'answer-attachments="{image_url}"'
+                        note_back = re.sub(img_regex, "", note_back).strip()
                     g.write(f"""<orbit-prompt
-                            question="{html_to_markdown(note["Front"])}"
+                            question="{note_front}"
                             {question_attachments}
                             {answer_attachments}
-                          answer="{html_to_markdown(note["Back"])}
+                          answer="{note_back}
 
-{html_to_markdown(note["Notes"])}"
+{note_notes}"
                         ></orbit-prompt>
                       """)
 
