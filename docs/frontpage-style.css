@@ -90,7 +90,7 @@ main {
 }
 
 
-#use-option-button {
+a.use-option-button {
     font-family: 'Source Sans Pro', 'Segoe UI', Helvetica, sans-serif;
     font-size: 1rem;
     background-color: #657b83;
@@ -103,14 +103,22 @@ main {
     width: 12rem;
 }
 
-.use-option-button-container:last-child {
-    margin-right: 0px
+a.use-option-button-container:last-child {
+    margin-right: 0px;
 }
 
-#use-option-button:hover {
+a.use-option-button:hover {
     background-color: #073642;
     text-decoration: none;
 }
+
+a.use-option-button:active {
+    background-color: #073642;
+    text-decoration: none;
+}
+
+a.use-option-button:link { color: #fdf6e3; }
+a.use-option-button:visited { color: #fdf6e3; }
 
 .features-container {
     padding-top: 0.8rem;
