@@ -10,6 +10,11 @@ import util
 
 def html_to_markdown(html_string):
     try:
+        # markdown_strict is needed here so that things like double quotes
+        # aren't unnecessarily backslash-escaped. wrap=none is for Orbit;
+        # Orbit will faithfully translate newlines appearing in the source
+        # so we need to remove superfluous newlines created by pandoc's
+        # markdown output.
         p = subprocess.run(["pandoc", "-f", "html", "-t", "markdown_strict", "--wrap=none"],
                            input=html_string.encode('utf-8'), check=True,
                            capture_output=True)
