@@ -1,0 +1,161 @@
+/*
+
+This stylesheet uses colors from Solarized, whose license is reproduced below.
+
+Copyright (c) 2011 Ethan Schoonover
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+*/
+
+html {
+    font-size: 21px;
+}
+
+body {
+    /* This prevents there being a thin gray border on the sides on narrow
+     * screens. */
+    margin-left: 0;
+    margin-right: 0;    
+    background-color: #b58900;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    font-family: 'Source Sans Pro', 'Segoe UI', Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 250%
+}
+
+h2 {
+    font-size: 180%
+}
+
+h3 {
+    font-size: 150%
+}
+
+h4 {
+    font-size: 120%;
+    margin-bottom: 1rem;
+}
+
+main {
+    font-family: 'Source Serif Pro', Charter, "Bitstream Charter", Georgia, serif;
+    line-height: 1.45;
+    text-rendering: optimizeLegibility;    
+    border-radius: 9px 9px 9px 9px; /* top-left top-right  bottom-right bottom-left */
+    background-color: #fdf6e3;
+    max-width: 55rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    word-wrap: break-word;
+
+  }
+
+.use-options-container {
+    padding-top: 0.8rem;
+    text-align: center;
+    background-color: #eee8d5;
+    border-radius: 9px 9px 9px 9px; /* top-left top-right  bottom-right bottom-left */
+    padding-bottom: 1.2rem;
+}
+
+.use-option-button-container {
+    margin-top: 1.5rem;
+    text-align: center;
+    margin-right: 1.1rem;
+    width: 15rem;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+#use-option-button {
+    font-family: 'Source Sans Pro', 'Segoe UI', Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: #657b83;
+    color: #fdf6e3;
+    display: inline-block;
+    padding: 0.4rem 0.75rem;
+    border-radius: 3px;
+    margin-right: 0.5rem;
+    border: 1px solid #073642;
+    width: 12rem;
+}
+
+.use-option-button-container:last-child {
+    margin-right: 0px
+}
+  
+#use-option-button:hover {
+    background-color: #073642;
+    text-decoration: none;
+}
+
+.features-container {
+    padding-top: 0.8rem;
+    padding-bottom: 1.5rem;
+    color: #fdf6e3;
+    background-color: #073642;
+    text-align: center;
+    border-radius: 9px 9px 9px 9px; /* top-left top-right  bottom-right bottom-left */
+
+}
+
+.feature-container {
+    margin-top: 2rem;
+    text-align: center;
+    margin-right: 0.8rem;
+    display: inline-block;
+    vertical-align: top;
+    width: 16rem;
+}
+
+.features-container:last-child {
+    margin-right: 0px;
+}
+
+img {
+    width: 15rem;
+    height: auto;
+}
+
+#cc {
+    width: 4rem;
+}
+
+footer {
+    border-radius: 0px 0px 9px 9px; /* top-left top-right bottom-right bottom-left */
+    padding: 1.2rem 0px 2.5rem 0px; /* top right bottom left */
+}
+
+footer { font-size: 80%; }
+
+a { text-decoration: none; }
+a:link { color: #3855d1; }
+a:visited { color: #698255; }
+a:hover, a:active { text-decoration: underline; }
+a.anchorjs-link:hover, a.anchorjs-link:active { text-decoration: none; }
+a#reader-mode-help:link { color: #3855d1 !important; }
+a#reader-mode-help:visited { color: #698255 !important; }
