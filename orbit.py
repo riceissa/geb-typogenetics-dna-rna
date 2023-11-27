@@ -58,11 +58,15 @@ with open("docs/orbit/index.html", "w") as f:
             section_dir = f"docs/orbit/{util.slugify(section)}/"
             pathlib.Path(section_dir).mkdir(exist_ok=True)
             with open(section_dir + "index.html", "w") as g:
-                g.write("""<!DOCTYPE html>
+                g.write(f"""<!DOCTYPE html>
             <html lang="en">
                 <head>
                   <meta charset="utf-8">
                   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                  <title>{section} - GEB Typogenetics/DNA/RNA flashcards</title>
+                  <link rel="canonical" href="https://riceissa.github.io/geb-typogenetics-dna-rna/orbit/{util.slugify(section)}/">
+                  <meta property="og:title" content="{section}">
+                  <meta property="og:site_name" content="GEB Typogenetics/DNA/RNA flashcards">
                   <link rel="stylesheet" href="../../style.css">
                   <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
                 </head>
