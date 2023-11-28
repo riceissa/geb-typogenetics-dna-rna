@@ -67,7 +67,7 @@ def slugify(s):
     return s
 
 def navbar(levels):
-    return ("""
+    return (f"""
         <nav>
             <a href="{'../' * levels}">Back to home</a>
         </nav>
