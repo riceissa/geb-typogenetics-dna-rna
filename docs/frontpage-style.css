@@ -1,5 +1,4 @@
 /*
-
 This stylesheet uses colors from Solarized, whose license is reproduced below.
 
 Copyright (c) 2011 Ethan Schoonover
@@ -21,57 +20,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
 */
 
-html {
-    font-size: 21px;
-}
-
-body {
-    /* This prevents there being a thin gray border on the sides on narrow
-     * screens. */
-    margin-left: 0;
-    margin-right: 0;
-    background-color: #b58900;
-}
-
-h1, h2, h3, h4 {
-    text-align: center;
-    font-family: 'Source Sans Pro', 'Segoe UI', Helvetica, sans-serif;
-}
-
-h1 {
-    font-size: 250%;
-}
-
-h2 {
-    font-size: 180%;
-}
-
-h3 {
-    font-size: 150%;
-}
-
-h4 {
-    font-size: 120%;
-    margin-bottom: 1rem;
-}
-
-main {
-    font-family: 'Source Serif Pro', Charter, "Bitstream Charter", Georgia, serif;
-    line-height: 1.45;
-    text-rendering: optimizeLegibility;
-    border-radius: 9px;
-    background-color: #fdf6e3;
-    max-width: 55rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem;
-    padding-bottom: 1rem;
-    word-wrap: break-word;
-    box-shadow: 0 10px 20px 7px rgb(0 0 0 / 0.25);
-}
 
 .use-options-container {
     padding-top: 0.8rem;
@@ -150,8 +100,3 @@ img {
     width: 15rem;
     height: auto;
 }
-
-a { text-decoration: none; }
-a:link { color: #b58900; }
-a:visited { color: #b58900; }
-a:hover, a:active { text-decoration: underline; }
