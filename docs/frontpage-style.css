@@ -100,3 +100,12 @@ img {
     width: 15rem;
     height: auto;
 }
+
+hr.squiggle {
+    background-image: url('squiggle2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 70px;
+    border: 0px;
+}
