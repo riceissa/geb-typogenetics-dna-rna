@@ -15,33 +15,33 @@ with open("docs/browse/index.html", "w") as f:
         </head>
         <body>
         <div class="container">
-        """)
+        \n""")
 
     for section in util.sections:
-        f.write(f'<h2 id="{util.slugify(section)}">{section}</h2>')
+        f.write(f'<h2 id="{util.slugify(section)}">{section}</h2>\n')
         if not util.section_map[section]:
-            f.write("<p>There are no cards for this section.</p>")
+            f.write("<p>There are no cards for this section.</p>\n")
         for note in util.section_map[section]:
-            f.write('<div class="card">')
+            f.write('<div class="card">\n')
 
-            f.write('<div class="front">')
-            f.write(note["Front"])
-            f.write("</div>")
+            f.write('<div class="front">\n')
+            f.write(note["Front"] + "\n")
+            f.write("</div>\n")
 
-            f.write("<hr/>")
+            f.write("<hr/>\n")
 
-            f.write('<div class="back">')
-            f.write(note["Back"])
-            f.write("</div>")
+            f.write('<div class="back">\n')
+            f.write(note["Back"] + "\n")
+            f.write("</div>\n")
 
-            f.write('<div class="notes">')
-            f.write(note["Notes"])
-            f.write("</div>")
+            f.write('<div class="notes">\n')
+            f.write(note["Notes"] + "\n")
+            f.write("</div>\n")
 
-            f.write("</div>")
+            f.write("</div>\n")
 
     f.write("""
             </div>
             </body>
             </html>
-    """)
+    \n""")
