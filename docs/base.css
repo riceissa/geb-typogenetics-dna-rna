@@ -37,6 +37,16 @@ body {
     word-wrap: break-word;
 }
 
+nav {
+    font-family: 'Source Sans Pro', 'Segoe UI', Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+nav a { text-decoration: none; }
+nav a:link { color: #ffffff; }
+nav a:visited { color: #ffffff; }
+nav a:hover, a:active { text-decoration: underline; }
+
 main {
     font-family: 'Source Serif Pro', Charter, "Bitstream Charter", Georgia, serif;
     line-height: 1.45;

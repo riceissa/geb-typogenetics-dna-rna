@@ -65,3 +65,9 @@ def slugify(s):
     s = "".join(c if (c.isalpha() or c.isdigit()) else "-" for c in s)
     s = "-".join(filter(bool, s.split("-")))
     return s
+
+navbar = """
+    <nav>
+        <a href="../">Back to home</a>
+    </nav>
+"""
