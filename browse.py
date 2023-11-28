@@ -11,7 +11,7 @@ with open("docs/browse/index.html", "w") as f:
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../base.css">
   </head>
   <body>
     <div class="container">\n""")

@@ -32,7 +32,7 @@ with open("docs/orbit/index.html", "w") as f:
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-      <link rel="stylesheet" href="../style.css">
+      <link rel="stylesheet" href="../base.css">
     </head>
     <body>
     <div class="container">
@@ -59,7 +59,7 @@ with open("docs/orbit/index.html", "w") as f:
                   <link rel="canonical" href="https://riceissa.github.io/geb-typogenetics-dna-rna/orbit/{util.slugify(section)}/">
                   <meta property="og:title" content="{section}">
                   <meta property="og:site_name" content="GEB Typogenetics/DNA/RNA flashcards">
-                  <link rel="stylesheet" href="../../style.css">
+                  <link rel="stylesheet" href="../../base.css">
                   <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
                 </head>
                 <body>
