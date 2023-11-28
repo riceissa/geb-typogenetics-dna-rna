@@ -17,7 +17,7 @@ print("""<!DOCTYPE html>
     """)
 
 for section in util.sections:
-    print(f'<h2>{section}</h2>')
+    print(f'<h2 id="{util.slugify(section)}">{section}</h2>')
     if not util.section_map[section]:
         print("<p>There are no cards for this section.</p>")
     for note in util.section_map[section]:
