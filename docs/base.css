@@ -79,6 +79,7 @@ a:link { color: #b58900; }
 a:visited { color: #b58900; }
 a:hover, a:active { text-decoration: underline; }
 
+/* FIXME: this div is no longer used -- must move stuff to <main> */
 div.container {
   background-color: #ffffff;
   max-width: 47rem;
@@ -103,14 +104,15 @@ div.container {
 
 div.card {
   border-radius: 10px;
-  background-color: #fdf6e3;
+  background-color: #eee8d5;
   max-width: 600px;
   border: 1px solid black;
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 5px 0px rgb(0 0 0 / 0.25);
 }
 
 a.heading-marker {
