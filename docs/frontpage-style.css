@@ -126,7 +126,7 @@ a.use-option-button:visited { color: #fdf6e3; }
 .features-container {
     padding-top: 0.8rem;
     padding-bottom: 1.5rem;
-    color: #fdf6e3;
+    color: #ddebeb;
     background-color: #073642;
     text-align: center;
     border-radius: 9px;
@@ -152,6 +152,6 @@ img {
 }
 
 a { text-decoration: none; }
-a:link { color: #3855d1; }
-a:visited { color: #698255; }
+a:link { color: #b58900; }
+a:visited { color: #b58900; }
 a:hover, a:active { text-decoration: underline; }
