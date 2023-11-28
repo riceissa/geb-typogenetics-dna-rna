@@ -17,7 +17,8 @@ with open("docs/browse/index.html", "w") as f:
     <div class="container">\n""")
 
     for section in util.sections:
-        f.write(f'<h2 id="{util.slugify(section)}">{section}</h2>\n')
+        anchor_link = f'<a href="#{util.slugify(section)}" title="Link to this section" class="heading-marker">#</a>'
+        f.write(f'<h2 id="{util.slugify(section)}">{section} {anchor_link}</h2>\n')
         if not util.section_map[section]:
             f.write("<p>There are no cards for this section.</p>\n")
         for note in util.section_map[section]:

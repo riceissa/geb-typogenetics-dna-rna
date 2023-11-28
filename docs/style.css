@@ -39,3 +39,13 @@ div.card {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+a.heading-marker {
+  font-size: 60%;
+  text-decoration: none;
+  color: #cccccc;
+}
+
+h2:hover a.heading-marker {
+  color: #b58900;
+}
