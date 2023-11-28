@@ -35,7 +35,7 @@ with open("docs/orbit/index.html", "w") as f:
       <link rel="stylesheet" href="../base.css">
     </head>
     <body>
-    <div class="container">
+    <main>
     """)
 
     f.write("<ul>")
@@ -63,7 +63,7 @@ with open("docs/orbit/index.html", "w") as f:
                   <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
                 </head>
                 <body>
-                <div class="container">
+                <main>
                       <orbit-reviewarea color="yellow">
                 """)
 
@@ -101,7 +101,7 @@ with open("docs/orbit/index.html", "w") as f:
 
                 g.write("""
                       </orbit-reviewarea>
-                        </div>
+                        </main>
                         </body>
                         </html>
                 """)
@@ -110,7 +110,7 @@ with open("docs/orbit/index.html", "w") as f:
 
 
     f.write("""
-            </div>
+            </main>
             </body>
             </html>
     """)

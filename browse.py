@@ -14,7 +14,7 @@ with open("docs/browse/index.html", "w") as f:
     <link rel="stylesheet" href="../base.css">
   </head>
   <body>
-    <div class="container">\n""")
+    <main>\n""")
 
     for section in util.sections:
         anchor_link = f'<a href="#{util.slugify(section)}" title="Link to this section" class="heading-marker">#</a>'
@@ -41,6 +41,6 @@ with open("docs/browse/index.html", "w") as f:
             f.write("</div>\n")
 
     f.write("""
-    </div>
+    </main>
   </body>
 </html>\n""")
