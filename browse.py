@@ -7,15 +7,14 @@ import util
 with open("docs/browse/index.html", "w") as f:
 
     f.write("""<!DOCTYPE html>
-    <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-          <link rel="stylesheet" href="../style.css">
-        </head>
-        <body>
-        <div class="container">
-        \n""")
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <div class="container">\n""")
 
     for section in util.sections:
         f.write(f'<h2 id="{util.slugify(section)}">{section}</h2>\n')
@@ -41,7 +40,6 @@ with open("docs/browse/index.html", "w") as f:
             f.write("</div>\n")
 
     f.write("""
-            </div>
-            </body>
-            </html>
-    \n""")
+    </div>
+  </body>
+</html>\n""")
