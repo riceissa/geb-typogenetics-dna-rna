@@ -66,8 +66,9 @@ def slugify(s):
     s = "-".join(filter(bool, s.split("-")))
     return s
 
-navbar = """
-    <nav>
-        <a href="../">Back to home</a>
-    </nav>
-"""
+def navbar(levels):
+    return ("""
+        <nav>
+            <a href="{'../' * levels}">Back to home</a>
+        </nav>
+    """)

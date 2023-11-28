@@ -42,7 +42,7 @@ with open("docs/orbit/index.html", "w") as f:
 
     </head>
     <body>
-    {util.navbar}
+    {util.navbar(1)}
     <main>
     """)
 
@@ -76,6 +76,7 @@ with open("docs/orbit/index.html", "w") as f:
                   <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
                 </head>
                 <body>
+                    {util.navbar(2)}
                 <main>
                       <orbit-reviewarea color="yellow">
                 """)

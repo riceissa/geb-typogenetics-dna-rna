@@ -21,7 +21,7 @@ with open("docs/browse/index.html", "w") as f:
 
   </head>
   <body>
-    {util.navbar}
+    {util.navbar(1)}
     <main>\n""")
 
     f.write('<p style="font-size: 80%;">Skip to section: ')
