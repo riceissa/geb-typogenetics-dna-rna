@@ -23,6 +23,10 @@ THE SOFTWARE.
 */
 
 
+main {
+    max-width: 55rem;
+}
+
 .use-options-container {
     padding-top: 0.8rem;
     text-align: center;

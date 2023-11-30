@@ -44,6 +44,10 @@ with open("docs/orbit/index.html", "w") as f:
     <body>
     {util.navbar(1)}
     <main>
+
+    <h2>Orbit index</h2>
+
+    <p>Pick a section below to collect its cards:</p>
     """)
 
     f.write("<ul>")
@@ -78,6 +82,7 @@ with open("docs/orbit/index.html", "w") as f:
                 <body>
                     {util.navbar(2)}
                 <main>
+                      <h2>{section}</h2>
                       <orbit-reviewarea color="yellow">
                 """)
 
