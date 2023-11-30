@@ -89,15 +89,6 @@ a:link { color: #b58900; }
 a:visited { color: #cb4b16; }
 a:hover, a:active { text-decoration: underline; }
 
-/* FIXME: this div is no longer used -- must move stuff to <main> */
-div.container {
-    background-color: #ffffff;
-    max-width: 47rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-}
-
 .front {
     text-align: center;
 }
