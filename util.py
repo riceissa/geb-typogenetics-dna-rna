@@ -66,9 +66,14 @@ def slugify(s):
     s = "-".join(filter(bool, s.split("-")))
     return s
 
-def navbar(levels):
+def navbar(levels, optional=None):
+    optional_nav_tags = ""
+    if optional:
+        for text, href in optional:
+            optional_nav_tags += f'&middot;&nbsp;<a href="{href}">{text}</a>'
     return (f"""
         <nav>
             <a href="{'../' * levels}">Back to home</a>
+            {optional_nav_tags}
         </nav>
     """)

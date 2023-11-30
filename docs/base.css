@@ -38,6 +38,8 @@ body {
 }
 
 nav {
+    margin-left: 13px;
+    margin-bottom: 15px;
     font-family: 'Source Sans Pro', 'Segoe UI', Helvetica, sans-serif;
     color: #ffffff;
 }

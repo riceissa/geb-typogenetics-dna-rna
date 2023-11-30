@@ -80,7 +80,7 @@ with open("docs/orbit/index.html", "w") as f:
                   <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
                 </head>
                 <body>
-                    {util.navbar(2)}
+                    {util.navbar(2, optional=[("Back to Orbit index", "../")])}
                 <main>
                       <h2>{section}</h2>
                       <orbit-reviewarea color="yellow">
