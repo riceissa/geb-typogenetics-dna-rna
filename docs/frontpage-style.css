@@ -49,7 +49,7 @@ main {
 
 a.use-option-button {
     font-family: 'Source Sans Pro', 'Segoe UI', Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 1.11rem;
     background-color: #657b83;
     color: #fdf6e3;
     display: inline-block;
@@ -112,4 +112,13 @@ hr.squiggle {
     background-size: contain;
     height: 70px;
     border: 0px;
+}
+
+div.credits {
+    text-align: center;
+    max-width: 30rem;
+    font-size: 80%;
+    margin-top: 55px;
+    margin-left: auto;
+    margin-right: auto;
 }
