@@ -33,6 +33,7 @@ body {
     margin-left: 0;
     margin-right: 0;
     background: linear-gradient(#61362a, #7d4122);
+    background-attachment: fixed;
     word-wrap: break-word;
 }
 
