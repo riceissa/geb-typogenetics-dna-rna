@@ -32,8 +32,7 @@ body {
      * screens. */
     margin-left: 0;
     margin-right: 0;
-    background: linear-gradient(#61362a, #7d4122);
-    background-attachment: fixed;
+    background-color: #73643F;
     word-wrap: break-word;
 }
 
@@ -60,7 +59,7 @@ main {
     margin-right: auto;
     padding: 2rem;
     word-wrap: break-word;
-    box-shadow: 0 10px 50px 40px rgb(247 240 83 / 0.25);
+    box-shadow: 0 5px 8px 4px rgb(247 240 83 / 0.25);
 }
 
 h1, h2, h3, h4 {
