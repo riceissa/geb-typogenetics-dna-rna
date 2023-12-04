@@ -16,7 +16,7 @@ First download the `.apkg` file into the main directory, and name it `geb.apkg`.
 
 ```bash
 # .apkg file is actually secretly a zip file. so unzip its contents to a directory called apkg/
-unzip -d apkg/ geb.apkg
+unzip -d apkg/ docs/geb-typogenetics.apkg
 
 # Remove unneeded files
 rm apkg/meta
