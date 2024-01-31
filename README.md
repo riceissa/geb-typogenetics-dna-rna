@@ -12,7 +12,7 @@ If you don't have them, on Ubuntu you can just run `sudo apt install unzip pando
 Also, you will need to install the `anki` Python Pip package. To do this,
 you can run `python3 -m pip install -U anki`.
 
-First download the `.apkg` file into the main directory, and name it `geb.apkg`. Then run the following commands:
+First download the `.apkg` file into the main directory, and name it `geb-typogenetics.apkg`. Then run the following commands:
 
 ```bash
 # .apkg file is actually secretly a zip file. so unzip its contents to a directory called apkg/
