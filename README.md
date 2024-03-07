@@ -22,6 +22,8 @@ unzip -d apkg/ docs/geb-typogenetics.apkg
 rm apkg/meta
 rm apkg/collection.anki2
 
+mkdir -p docs/browse
+
 # Rename images/other media files to their correct locations
 ./media.py
 
